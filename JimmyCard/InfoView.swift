@@ -19,7 +19,7 @@ struct InfoView: View {
                     Image(systemName: imageName)
                         .foregroundColor(.green)
                     Text(text)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("Info Color"))
                 }
             )
             .padding(.all)
@@ -30,6 +30,7 @@ struct InfoView: View {
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {
         InfoView(text: "Hello", imageName: "phone.fill")
+            .preferredColorScheme(.dark)
             .previewLayout(.sizeThatFits)
     }
 }
